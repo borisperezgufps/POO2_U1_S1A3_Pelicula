@@ -15,8 +15,8 @@ public class Trailer {
 	public ArrayList<Persona> getEditores() {
 		return editores;
 	}
-	public void setEditor(Persona actor) {
-		editores.add(actor);
+	public void setEditor(Persona editor) {
+		editores.add(editor);
 	}
 	
 	public String getUrl() {

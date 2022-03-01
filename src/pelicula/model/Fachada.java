@@ -5,7 +5,10 @@ import java.util.Calendar;
 
 public class Fachada {
 
-	public Persona crearPersona(String apellido, String nombre, String nacionalidad, int anioNac, int mesNac, int diaNac) {
+	public Persona crearPersona(String apellido, String nombre, 
+			String nacionalidad, 
+			int anioNac, int mesNac, int diaNac) {
+		
 		Persona p1 = new Persona();
 		p1.setApellido(apellido);
 		p1.setNacionalidad(nacionalidad);
@@ -22,12 +25,14 @@ public class Fachada {
 	/**
 	 * 
 	 * @param titulo
-	 * @param anio Año de lanzamiento
+	 * @param anio Aï¿½o de lanzamiento
 	 * @param sinopsis
 	 * @param genero accion, comedia, drama, terror, romance, aventura, scifi
 	 * @return
 	 */
-	public Pelicula crearPelicula(String titulo, int anio, String sinopsis, String genero, String pais) {
+	public Pelicula crearPelicula(String titulo, int anio, 
+			String sinopsis, String genero, String pais) {
+		
 		Pelicula pe = new Pelicula();
 		pe.setTitulo(titulo);
 		pe.setAnio(anio);
@@ -74,9 +79,9 @@ public class Fachada {
 		StringBuffer sb = new StringBuffer();
 		
 		sb.append("----------------------------------\n");
-		sb.append("DESCRIPCIÓN PELÍCULA\n");
+		sb.append("DESCRIPCIï¿½N PELï¿½CULA\n");
 		sb.append("Titulo: "+p.getTitulo()+"\n");
-		sb.append("Año: "+p.getAnio()+"\n");
+		sb.append("Aï¿½o: "+p.getAnio()+"\n");
 		sb.append("Sinopsis: "+p.getSinopsis()+"\n");
 		sb.append("Pais: "+p.getPais()+"\n");
 		
@@ -88,7 +93,7 @@ public class Fachada {
 		if(p.getTrailers()!=null && p.getTrailers().length()>0)
 			sb.append("Trailers: \n"+p.getTrailers()+"\n");
 		else
-			sb.append("Trailers: No hay información");
+			sb.append("Trailers: No hay informaciï¿½n");
 		
 		return sb.toString();
 	}
@@ -101,10 +106,10 @@ public class Fachada {
 				nombres += pers.getNombre() + " " + pers.getApellido() + ", ";
 			}		
 			
-			// Para quitar la coma (,) luego de la última persona
+			// Para quitar la coma (,) luego de la ï¿½ltima persona
 			nombres = nombres.substring(0, nombres.length() - 2);
 		}else
-			nombres = "No hay información";
+			nombres = "No hay informaciï¿½n";
 		
 		return nombres;
 	}

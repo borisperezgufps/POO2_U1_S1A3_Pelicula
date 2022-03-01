@@ -7,6 +7,7 @@ public class Pelicula {
 	private String titulo, sinopsis, pais;
 	private int anio;
 	private Genero genero;
+	
 	private ArrayList<Trailer> trailers;
 	private ArrayList<Persona> actores;	
 	private ArrayList<Persona> directores;
@@ -21,17 +22,26 @@ public class Pelicula {
 		guionistas = new ArrayList<Persona>();
 	}
 	
-	
+	/**
+	 * Retorna la lista de trailers
+	 * @return Retorna la descripcón de los trailers disponibles
+	 */
 	public String getTrailers() {
 		
 		StringBuffer lista = new StringBuffer();
 		
 		for(Trailer t : trailers) {
-			lista.append("- URL: " + t.getUrl() + " ::: Duraci�n: "+t.getDuracion()+" mins \n");
+			lista.append("- URL: " + t.getUrl() + " ::: Duraci�n: "+t.getDuracion()+" mins \n");
 		}
 		
 		return lista.toString();
 	}
+	
+	/**
+	 * Asigna un trailer disponible en Internet
+	 * @param url Dirección de YT donde está el trailer
+	 * @param duracion En minutos del tiempo del trailer
+	 */
 	public void setTrailer(String url, int duracion) {		
 		Trailer t = new Trailer();
 		t.setDuracion(duracion);

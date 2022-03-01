@@ -2,7 +2,7 @@ package pelicula.model;
 
 public class ClienteFachada {
 
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		
 		Fachada fac = new Fachada();
 		
@@ -23,7 +23,7 @@ public class ClienteFachada {
 		 */
 		
 		Pelicula pe1 = fac.crearPelicula("Eternals", 2020, "Unas personas espaciales atoradas en la tierra", "accion", "USA");
-		Pelicula pe2 = fac.crearPelicula("Cantinflas", 1982, "Un señor mexicano bastante gracioso, aunque anticuado para estos tiempos", "comedia", "Mexico");
+		Pelicula pe2 = fac.crearPelicula("Cantinflas", 1982, "Un seï¿½or mexicano bastante gracioso, aunque anticuado para estos tiempos", "comedia", "Mexico");
 		
 		// -----------------------------------
 		// AGREGANDO INFORMACION A LA PELICULA
@@ -38,6 +38,7 @@ public class ClienteFachada {
 		
 		pe2.setGuionista(p3);
 		pe2.setDirector(p2);
+		pe2.setTrailer("https://www.youtube.com/asGfs234", 3);
 		
 		/* 
 		 * ------------------------------------------
